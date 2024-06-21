@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Kweku - Blue Panda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        header {
+            background-color: #0073e6;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 2em;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #0073e6;
+        }
+        .gallery img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+        }
+        footer {
+            background-color: #0073e6;
+            padding: 10px;
+            text-align: center;
+        }
+        .language-selector {
+            text-align: right;
+            padding: 10px;
+        }
+        .language-selector select {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/100x100.png?text=Blue+Panda" alt="Blue Panda Logo">
+        <h1>Papa Kweku - Blue Panda</h1>
+    </header>
+
+    <div class="language-selector">
+        <select onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2 id="about-me-title">About Me</h2>
+            <p id="about-me-text">Hello! My name is Papa Kweku. I am starting a business with my friends called Blue Panda. We aim to bring you the best products that humans love!</p>
+        </div>
+
+        <div class="section">
+            <h2 id="gallery-title">Gallery</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/150x150.png?text=Nails" alt="Nails">
+                <img src="https://via.placeholder.com/150x150.png?text=Beanies" alt="Beanies">
+                <img src="https://via.placeholder.com/150x150.png?text=Scrunchies" alt="Scrunchies">
+                <img src="https://via.placeholder.com/150x150.png?text=Bracelets" alt="Bracelets">
+                <img src="https://via.placeholder.com/150x150.png?text=Lip+Gloss" alt="Lip Gloss">
+                <img src="https://via.placeholder.com/150x150.png?text=Lip+Balm" alt="Lip Balm">
+                <img src="https://via.placeholder.com/150x150.png?text=Rings" alt="Rings">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 id="contact-title">Contact</h2>
+            <p id="contact-text">You can reach us at:</p>
+            <p id="phone-text">Phone: +23357589669 / +233547047026</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Blue Panda. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeLanguage(language) {
+            const translations = {
+                fr: {
+                    'about-me-title': 'À propos de moi',
+                    'about-me-text': 'Bonjour! Je m\'appelle Papa Kweku. Je lance une entreprise avec mes amis appelée Blue Panda. Nous visons à vous offrir les meilleurs produits que les humains adorent!',
+                    'gallery-title': 'Galerie',
+                    'contact-title': 'Contact',
+                    'contact-text': 'Vous pouvez nous joindre à:',
+                    'phone-text': 'Téléphone: +23357589669 / +233547047026'
+                },
+                es: {
+                    'about-me-title': 'Sobre mí',
+                    'about-me-text': '¡Hola! Mi nombre es Papa Kweku. Estoy comenzando un negocio con mis amigos llamado Blue Panda. ¡Nuestro objetivo es brindarte los mejores productos que los humanos aman!',
+                    'gallery-title': 'Galería',
+                    'contact-title': 'Contacto',
+                    'contact-text': 'Puedes contactarnos en:',
+                    'phone-text': 'Teléfono: +23357589669 / +233547047026'
+                },
+                en: {
+                    'about-me-title': 'About Me',
+                    'about-me-text': 'Hello! My name is Papa Kweku. I am starting a business with my friends called Blue Panda. We aim to bring you the best products that humans love!',
+                    'gallery-title': 'Gallery',
+                    'contact-title': 'Contact',
+                    'contact-text': 'You can reach us at:',
+                    'phone-text': 'Phone: +23357589669 / +233547047026'
+                }
+            };
+
+            document.getElementById('about-me-title').textContent = translations[language]['about-me-title'];
+            document.getElementById('about-me-text').textContent = translations[language]['about-me-text'];
+            document.getElementById('gallery-title').textContent = translations[language]['gallery-title'];
+            document.getElementById('contact-title').textContent = translations[language]['contact-title'];
+            document.getElementById('contact-text').textContent = translations[language]['contact-text'];
+            document.getElementById('phone-text').textContent = translations[language]['phone-text'];
+        }
+    </script>
+</body>
+</html>
